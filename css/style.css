@@ -9964,7 +9964,7 @@ a.text-dark:focus {
   height: 2px;
   bottom: 11px;
   left: calc(50% - 80px);
-  background: #dc3545;
+  /* background: #dc3545; */
 }
 
 .section-title::after {
@@ -9974,7 +9974,7 @@ a.text-dark:focus {
   height: 2px;
   bottom: 11px;
   right: calc(50% - 80px);
-  background: #dc3545;
+  /* background: #dc3545; */
 }
 
 .btn-play {
@@ -10209,5 +10209,12 @@ a.text-dark:focus {
 
   .carausel-txt{
     margin-top: 250px;
+  }
+
+  .owl-next{
+    background: #ffffff00 !important;
+  }
+  .owl-prev{
+    background: #ffffff00 !important;
   }
 }
