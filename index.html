@@ -32,7 +32,20 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <audio
+      src="audio/song.mp3"
+      id="my_audio"
+      loop="loop"
+      autoplay="true"
+      controls
+      type="audio/mp3"
+    ></audio>
     <div class="element-bg"></div>
+    <!-- <audio controls autoplay="true">
+      <source src="audio/song.mp3" type="audio/mpeg" />
+    </audio> -->
+
+    <!-- <embed src="audio/song.mp3" loop="true" autostart="true" width="2" height="0"> -->
     <!-- Navbar Start -->
     <nav
       class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark justify-content-center py-3 py-lg-0 px-lg-5"
@@ -65,6 +78,7 @@
             Arnav <span class="text-primary">&</span> Ayushi
           </h1>
         </a>
+
         <div class="navbar-nav mr-auto py-0">
           <a href="#family" class="nav-item nav-link">Family</a>
           <a href="#event" class="nav-item nav-link">Event</a>
@@ -76,7 +90,7 @@
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0" id="home">
+    <div class="container-fluid p-0" id="myId" onmouseover="bigImg(this)" id="home">
       <div
         id="header-carousel"
         class="carousel slide carousel-fade"
@@ -571,194 +585,7 @@
     </div>
     <!-- Gallery End -->
 
-    <!-- Event Start -->
-    <!-- <div class="container-fluid p-0" id="event">
-      <div class="element-bg">
-        <div class="container py-5">
-          <div class="section-title position-relative text-center">
-            <h6
-              class="text-uppercase text-primary mb-3"
-              style="letter-spacing: 3px"
-            >
-              Event
-            </h6>
-            <h1 class="font-secondary display-4">Our Wedding Event</h1>
-            <img class="img-fluid p-2" src="img/border.svg" alt="border" />
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-              <h5 class="font-weight-normal text-muted mb-3 pb-3">
-                Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea
-                vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit
-                lorem elitr justo
-              </h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 border-right border-primary">
-              <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                <img class="img-fluid mb-4" src="img/event-1.jpg" alt="" />
-                <h4 class="mb-3">The Reception</h4>
-                <p class="mb-2">123 Street, New York, USA</p>
-                <p class="mb-0">12:00AM - 13:00PM</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="text-center text-md-left ml-md-3">
-                <img class="img-fluid mb-4" src="img/event-2.jpg" alt="" />
-                <h4 class="mb-3">Wedding Party</h4>
-                <p class="mb-2">123 Street, New York, USA</p>
-                <p class="mb-0">12:00AM - 13:00PM</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Event End -->
-
-    <!-- Friends & Family Start -->
-    <!-- <div class="container-fluid" id="family">
-      <div class="element-bg">
-      <div class="container pt-5 pb-3">
-        <div class="section-title position-relative text-center">
-          <h6
-            class="text-uppercase text-primary mb-3"
-            style="letter-spacing: 3px"
-          >
-            Friends & Family
-          </h6>
-          <h1 class="font-secondary display-4">Groomsmen & Bridesmaid</h1>
-          <img class="img-fluid p-2" src="img/border.svg" alt="border" />
-        </div>
-        <div class="row">
-          <div class="col-12 text-center mb-2">
-            <ul class="list-inline mb-4" id="portfolio-flters">
-              <li
-                class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4"
-                data-filter=".first"
-              >
-                Groomsmen
-              </li>
-              <li
-                class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4"
-                data-filter=".second"
-              >
-                Bridesmaid
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/bridesmaid-1.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/bridesmaid-2.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-            <div class="position-relative mb-2">
-              <img class="img-fluid w-100" src="img/bridesmaid-3.jpg" alt="" />
-              <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3">Full Name</h4>
-                <p class="text-uppercase">Best Friend</p>
-                <div class="d-inline-block">
-                  <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="mx-2" href="#"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div> -->
-    <!-- Friends & Family End -->
-
-    <!-- RSVP Start -->
+    <!-- Maps Start -->
     <div class="container-fluid p-0" id="rsvp">
       <div class="element-bg">
         <div class="container py-5">
@@ -784,16 +611,6 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-
-            <!-- <form sction="https://goo.gl/maps/kSUFk6tvQVhEqfXu6">
-              <button
-                class="btn btn-primary mt-3"
-                type="submit"
-                style="border-radius: 20px"
-              >
-                Get Directions
-              </button>
-            </form> -->
             <a
               href="https://goo.gl/maps/kSUFk6tvQVhEqfXu6"
               class="btn btn-primary mt-3"
@@ -804,7 +621,7 @@
         </div>
       </div>
     </div>
-    <!-- RSVP End -->
+    <!-- Maps End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white" id="contact">
@@ -815,29 +632,6 @@
           </h3>
           <img class="img-fluid p-2" src="img/border.svg" alt="border" />
         </div>
-        <!-- <div class="d-flex justify-content-center mb-4">
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-        <div class="d-flex justify-content-center py-2">
-          <p class="text-white" href="#">info@example.com</p>
-          <span class="px-3">|</span>
-          <p class="text-white" href="#">+012 345 6789</p>
-        </div>
-        <p class="m-0">
-          &copy; <a class="text-primary" href="#">Domain Name</a>. Designed by
-          <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
-        </p> -->
       </div>
     </div>
     <!-- Footer End -->
@@ -858,6 +652,23 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script type="text/javascript">
+      console.log(document.getElementById("my_audio"));
+      document.getElementById("my_audio").play();
+      setTimeout(myFunction, 1000);
+      function myFunction() {
+        console.log("my function");
+        const audioEl = document.getElementById("my_audio");
+        document.body.addEventListener("mouseover", () => {
+          // videoEl.muted = false;
+          audioEl.muted = true;
+          audioEl.play();
+        });
+      }
+      function bigImg(x) {
+        console.log(x);
+      }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
