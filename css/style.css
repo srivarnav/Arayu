@@ -10199,20 +10199,43 @@ a.text-dark:focus {
   background-color: #ffd7a5 !important;
 }
 
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.playBtn {
+  width: 20px;
+  height: 20px;
+}
+
+.pausebtn {
+  width: 20px;
+  height: 20px;
+}
+
+.play {
+  display: block;
+}
+.pause {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .carausel_btn {
     background-color: #f97c7c00 !important;
     border-color: #f97c7c00 !important;
   }
 
-  .carausel-txt{
+  .carausel-txt {
     margin-top: 250px;
   }
 
-  .owl-next{
+  .owl-next {
     background: #ffffff00 !important;
   }
-  .owl-prev{
+  .owl-prev {
     background: #ffffff00 !important;
   }
 }
