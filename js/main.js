@@ -2,9 +2,6 @@
   "use strict";
 
   // Navbar on scrolling
-  $("#header-carousel").hover(function(){
-    console.log("asdasdasdasdsa")
-  });
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {

@@ -9913,6 +9913,11 @@ a.text-dark:focus {
   animation: action 1s infinite alternate;
 }
 
+.backtotop{
+  z-index: 11;
+  animation: action 1s infinite alternate;
+}
+
 @keyframes action {
   0% {
     transform: translateY(0);
@@ -10148,6 +10153,12 @@ a.text-dark:focus {
   background-size: cover;
 }
 
+.bannerDialog {
+  background:  url(../img/bannerarayu.jpeg), no-repeat center center;
+  background-size: cover;
+  /* background-position: -120px; */
+}
+
 .gallery-carousel .owl-nav {
   position: absolute;
   width: 135px;
@@ -10201,10 +10212,23 @@ a.text-dark:focus {
   background-color: #ffd7a5 !important;
 }
 
-body {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+/* body {
+  opacity: 0;
+  transition: opacity 10s;
+} */
+
+#closemodal {
+  animation: cssAnimation 0s 5s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+
+.banner-txt {
+  opacity: 0;
+  transition: opacity 5s;
 }
 
 .playBtn {

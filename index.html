@@ -32,6 +32,52 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Modal -->
+    <div
+      class="modal fade show"
+      id="exampleModalFullscreen"
+      tabindex="-1"
+      aria-labelledby="exampleModalFullscreenLabel"
+      aria-modal="true"
+      role="dialog"
+      style="display: block"
+    >
+      <div class="modal-dialog modal-fullscreen m-0" style="height: 100%">
+        <div class="modal-content" style="height: 100%">
+          <div class="modal-body p-0 bannerDialog">
+            <!-- <img
+              class="position-absolute w-100 h-100"
+              src="img/bannerarayu.jpeg"
+              style="object-fit: cover"
+            /> -->
+            <div class="text-center banner-txt">
+              <h1 class="display-1 font-secondary text-white mt-4 mb-md-4 glow">
+                The Wedding Invitation
+              </h1>
+              <h1 class="display-1 font-secondary text-white mt-4 mb-md-4 glow">
+                of
+              </h1>
+              <h1
+                class="display-1 font-secondary text-white mt-4 mb-md-4 glow mt-16"
+              >
+                Arnav & Ayushi
+              </h1>
+            </div>
+            <div class="d-flex justify-content-center mt-5 pt-5">
+              <button type="button" id="closemodal" class="btn btn-outline-danger">
+                <h6
+                class="text-uppercase text-primary my-3 glow backtotop"
+                style="letter-spacing: 3px"
+              >
+                welcome
+              </h6>
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <audio
       src="audio/song.mp3"
       id="my_audio"
@@ -40,11 +86,7 @@
       type="audio/mp3"
     ></audio>
     <div class="element-bg"></div>
-    <!-- <audio controls autoplay="true">
-      <source src="audio/song.mp3" type="audio/mpeg" />
-    </audio> -->
 
-    <!-- <embed src="audio/song.mp3" loop="true" autostart="true" width="2" height="0"> -->
     <!-- Navbar Start -->
     <nav
       class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark justify-content-center py-3 py-lg-0 px-lg-5"
@@ -60,7 +102,7 @@
         data-toggle="collapse"
         onclick="play()"
       >
-        <img src="img/play-btn.svg" class="img-fluid playBtn"></img>
+        <img src="img/play-btn.svg" class="img-fluid playBtn" />
       </button>
       <button
         type="button"
@@ -68,7 +110,7 @@
         data-toggle="collapse"
         onclick="pause()"
       >
-        <img src="img/pause-btn.svg" class="img-fluid pausebtn"></img>
+        <img src="img/pause-btn.svg" class="img-fluid pausebtn" />
       </button>
       <div
         class="collapse navbar-collapse justify-content-between"
@@ -97,7 +139,10 @@
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0" id="myId" onmouseover="bigImg(this)" id="home">
+    <div
+      class="container-fluid p-0"
+      id="home"
+    >
       <div
         id="header-carousel"
         class="carousel slide carousel-fade"
@@ -174,9 +219,9 @@
                   Our Wedding
                 </h1>
                 <!-- <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button> -->
+                  data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                  <span></span>
+                </button> -->
               </div>
             </div>
           </div>
@@ -327,7 +372,7 @@
     <section>
       <div class="container-fluid p-0" id="about">
         <div class="element-bg">
-          <div class="container py-5">
+          <div class="container pb-5">
             <div class="section-title position-relative text-center">
               <!-- <h6
                 class="text-uppercase text-primary mb-3"
@@ -382,7 +427,7 @@
     <!-- Story Start -->
     <div class="container-fluid p-0" id="story">
       <div class="element-bg">
-        <div class="container pt-5 pb-3">
+        <div class="container pb-3">
           <div class="section-title position-relative text-center">
             <!-- <h6
               class="text-uppercase text-primary mb-3"
@@ -476,7 +521,7 @@
     <section>
       <div class="container-fluid p-0" id="about">
         <div class="element-bg">
-          <div class="container py-5">
+          <div class="container pb-5">
             <div class="section-title position-relative text-center">
               <!-- <h6
                 class="text-uppercase text-primary mb-3"
@@ -638,7 +683,6 @@
           <h3 class="text-white">
             WE LOOK FORWARD TO CELEBRATE WITH YOU ON OUR BIG DAY!
           </h3>
-          <img class="img-fluid p-2" src="img/border.svg" alt="border" />
         </div>
       </div>
     </div>
@@ -661,42 +705,50 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script type="text/javascript">
-      
       const element = document.querySelector("#home");
       // element.addEventListener("scroll", (event) => {
       // });
       setTimeout(playAudio, 1000);
-      function playAudio(){
-        document.getElementById('my_audio').play();
+      function playAudio() {
+        document.getElementById("my_audio").play();
       }
     </script>
 
-<script>
-  $("audio").on({
-      play:function(){ // the audio is playing!
+    <script>
+      $(window).on("load", function () {
+        $("#exampleModalFullscreen").modal("show");
+      });
+      $("#closemodal").click(function () {
+        $("#exampleModalFullscreen").modal("hide");
+        document.getElementById("my_audio").play();
+      });
+      $("audio").on({
+        play: function () {
+          // the audio is playing!
           $(".play").css("display", "none");
           $(".pause").css("display", "block");
-      },
-      pause:function(){ // the audio is paused!
+        },
+        pause: function () {
+          // the audio is paused!
           $(".play").css("display", "block");
           $(".pause").css("display", "none");
-      },
-  })
+        },
+      });
 
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200 && $(this).scrollTop() < 210) {
-      console.log($("#my_audio"));
-      document.getElementById("my_audio").play();
-    }
-  });
+      // $(window).scroll(function () {
+      //   if ($(this).scrollTop() > 200 && $(this).scrollTop() < 210) {
+      //     console.log($("#my_audio"));
+      //     document.getElementById("my_audio").play();
+      //   }
+      // });
 
-  function play() {
-      $("audio").trigger("play");
-  }
-  function pause() {
-      $("audio").trigger("pause");
-  }
-  </script>
+      function play() {
+        $("audio").trigger("play");
+      }
+      function pause() {
+        $("audio").trigger("pause");
+      }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
