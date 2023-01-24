@@ -9913,9 +9913,18 @@ a.text-dark:focus {
   animation: action 1s infinite alternate;
 }
 
-.backtotop{
+.backtotop {
   z-index: 11;
-  animation: action 1s infinite alternate;
+  animation: actioned 1s infinite alternate;
+}
+
+@keyframes actioned {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-15px);
+  }
 }
 
 @keyframes action {
@@ -10117,7 +10126,7 @@ a.text-dark:focus {
 .gallery-item {
   position: relative;
   overflow: hidden;
-  height: 185px;
+  height: 250px;
 }
 
 .gallery-item img {
@@ -10149,12 +10158,12 @@ a.text-dark:focus {
 
 .bg-gallery {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../img/arayu7.jpeg), no-repeat center center;
+    url(../img/arayu01.jpg), no-repeat center center;
   background-size: cover;
 }
 
 .bannerDialog {
-  background:  url(../img/bannerarayu.jpeg), no-repeat center center;
+  background: url(../img/bannerarayu.jpeg), no-repeat center center;
   background-size: cover;
   /* background-position: -120px; */
 }
@@ -10194,7 +10203,7 @@ a.text-dark:focus {
   background-position: bottom center;
   background-repeat: round;
   /* background-size: contain; */
-  background-size: 20%;
+  background-size: 37%;
   background-clip: border-box;
   opacity: 0.9;
   /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
@@ -10223,7 +10232,9 @@ a.text-dark:focus {
 }
 
 @keyframes cssAnimation {
-  to   { visibility: visible; }
+  to {
+    visibility: visible;
+  }
 }
 
 .banner-txt {
@@ -10264,4 +10275,30 @@ a.text-dark:focus {
   .owl-prev {
     background: #ffffff00 !important;
   }
+}
+
+/* --------------------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0; /* make things invisible upon start */
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+}
+
+.fade-in.delayed {
+  animation-delay: 1.4s;
+}
+
+.fade-in.delayedSecond {
+  animation-delay: 2.9s;
 }
