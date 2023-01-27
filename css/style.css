@@ -10217,7 +10217,7 @@ a.text-dark:focus {
   background: #7f0000;
 }
 
-.bg_custom:hover {
+.bg_custom {
   background-color: #ffd7a5 !important;
 }
 
