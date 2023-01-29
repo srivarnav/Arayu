@@ -10160,12 +10160,13 @@ a.text-dark:focus {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../img/arayu01.jpg), no-repeat center center;
   background-size: cover;
+  padding: 30px 0 !important;
 }
 
 .bannerDialog {
   background: url(../img/bannerarayu.jpeg), no-repeat center center;
   background-size: cover;
-  /* background-position: -120px; */
+  background-position: -55px;
 }
 
 .gallery-carousel .owl-nav {
