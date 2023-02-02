@@ -10166,7 +10166,6 @@ a.text-dark:focus {
 .bannerDialog {
   background: url(../img/bannerarayu.jpeg), no-repeat center center;
   background-size: cover;
-  background-position: -55px;
 }
 
 .gallery-carousel .owl-nav {
